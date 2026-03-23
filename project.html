@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamfall: Sweetdreams - El Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="crt-overlay" id="crt-screen"></div>
+
+    <nav class="pixel-nav">
+        <a href="index.html" class="nav-logo">DREAMFALL</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">[ INICIO ]</a></li>
+            <li><a href="project.html" class="nav-item activo">[ PROYECTO ]</a></li>
+            <li><a href="files.html" class="nav-item">[ ARCHIVOS ]</a></li>
+            <li><a href="community.html" class="nav-item">[ COMUNIDAD ]</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        
+        <header class="game-header">
+            <h1 class="game-title">BITACORA DE DESARROLLO<br><span>[ ANATOMIA DE UN SUEÑO ]</span></h1>
+        </header>
+
+        <div class="content-box">
+            <h2>[ 01. EL ORIGEN DE LA PESADILLA ]</h2>
+            <p>La historia de Dreamfall: Sweetdreams sigue a Alex, un reflejo de la alienacion provocada por la rutina. El mundo real lo paraliza, por lo que su mente crea un refugio en los sueños lucidos.</p>
+            <p>Ese refugio muto en siete "Noches", cada una representando un trauma independiente que debe superar. No es el viaje de un heroe tradicional; es un descenso a la propia psique para destruir al mayor enemigo posible: "El Alex del Pasado", la sombra de sus arrepentimientos.</p>
+        </div>
+
+        <div class="content-box">
+            <h2>[ 02. LAS SIETE LLAVES DEL SUBCONSCIENTE ]</h2>
+            <p>El nucleo del Metroidvania se basaba en la progresion a traves de <strong>7 habilidades de manipulacion de sueños</strong>. En un sueño lucido, el limite no es fisico, es mental. Las habilidades de Alex representan fenomenos oniricos reales y trastornos del sueño que el jugador usa a su favor para hackear el entorno generado por sus traumas.</p>
+            
+            <div class="grid-container">
+                <div class="grid-card">
+                    <h3>[ 1. PARPADEO R.E.M. ]</h3>
+                    <p><strong>(El Dash).</strong> En la fase de sueño profundo, los ojos se mueven a gran velocidad. Alex usa esta hiperactividad cerebral para proyectar su cuerpo hacia adelante en una fraccion de segundo, ignorando ataques y cerrando distancias.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>[ 2. ANCLAJE LUCIDO ]</h3>
+                    <p><strong>(Agarre de Pared).</strong> Cuando un sueño amenaza con colapsar, la mente se aferra a lo que puede. Alex concentra su consciencia en sus manos para adherirse a las estructuras verticales de su subconsciente, permitiendole escalar muros que antes lo bloqueaban.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>[ 3. ESPASMO HIPNICO ]</h3>
+                    <p><strong>(Doble Salto).</strong> Esa sensacion de caer al vacio justo cuando te estas durmiendo que te hace saltar en la cama. Alex canaliza ese espasmo muscular involuntario para patear el aire y ganar altura una segunda vez en medio del vacio.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>[ 4. PESADEZ CATALEPTICA ]</h3>
+                    <p><strong>(Impacto Descendente).</strong> Aprovechando la sensacion de paralisis del sueño, Alex concentra todo el peso muerto de su cuerpo dormido para caer en picada a una velocidad brutal, destrozando suelos fragiles y aturdiendo a las pesadillas terrestres.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>[ 5. GRITO AHOGADO ]</h3>
+                    <p><strong>(Ataque en area a distancia).</strong> Esa desesperacion de querer gritar en una pesadilla y que no salga la voz. Alex logra canalizar esa angustia en un proyectil de energia mental. Sirve para repeler enemigos y, fundamentalmente, activar "interruptores de memoria" inalcanzables para abrir nuevos caminos.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>[ 6. INVERSION VESTIBULAR ]</h3>
+                    <p><strong>(Gravedad Inversa).</strong> El oido interno pierde el sentido del equilibrio al soñar. Alex hackea esta desorientacion para invertir el eje Y a voluntad. El techo pasa a ser el suelo, cambiando las reglas de exploracion de cada habitacion en 360 grados.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>[ 7. TRASCENDENCIA ]</h3>
+                    <p><strong>(Vuelo).</strong> La lucidez absoluta. Al perdonarse y aceptar su realidad, Alex rompe las cadenas del motor fisico del juego. Ya no necesita saltar ni invertir la gravedad; ahora puede volar libremente por el mapa para enfrentar a su yo del pasado.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 18px; color: #aaa;">*Nota de Desarrollo: Instanciar un proyectil para el Grito Ahogado es infinitamente mas escalable en codigo que lidiar con las colisiones rotas de una mecanica de intangibilidad. A veces, limitar el diseño salva el proyecto.</p>
+        </div>
+
+        <div class="content-box">
+            <h2>[ 03. POST-MORTEM: CHOQUE DE REALIDAD ]</h2>
+            <p><strong>[ ESTADO: PAUSA INDEFINIDA ]</strong></p>
+            <p>¿Por que el proyecto esta congelado? La respuesta es simple: falta de experiencia en Game Design y una ambicion desmedida.</p>
+            <p>Tengo conocimientos solidos de programacion, pero <strong>hacer videojuegos es una disciplina completamente distinta</strong> a escribir codigo puro. Programar los scripts de estas 7 habilidades en Godot 4 fue solo el 10% del trabajo. El cuello de botella masivo fue el diseño de niveles. Hacer que un mapa no lineal sea divertido, guiar al jugador sin flechas, lograr un buen "game feel" y, sobre todo, construir habitaciones que funcionen del derecho y del reves (por la Inversion Vestibular) fue abrumador.</p>
+            <p>Un Metroidvania con 7 biomas y mecanicas que alteran la fisica es una pesadilla logistica para un desarrollador en solitario que apenas se esta adentrando en el diseño de videojuegos. Iba a costarme años de ensayo y error balancear esto.</p>
+            <p>Por pura sanidad mental, el desarrollo del codigo queda en pausa. Esta web y el manual creado para la ManualJam sirven para inmortalizar el concepto de lo que fue el proyecto en su maxima expresion.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Desarrollado por Sewer Boy | 2026</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

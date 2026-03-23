@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamfall: Sweetdreams - Archivos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="crt-overlay" id="crt-screen"></div>
+
+    <nav class="pixel-nav">
+        <a href="index.html" class="nav-logo">DREAMFALL</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">[ INICIO ]</a></li>
+            <li><a href="project.html" class="nav-item">[ PROYECTO ]</a></li>
+            <li><a href="files.html" class="nav-item activo">[ ARCHIVOS ]</a></li>
+            <li><a href="community.html" class="nav-item">[ COMUNIDAD ]</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        
+        <header class="game-header">
+            <h1 class="game-title">SISTEMA DE ARCHIVOS<br><span>[ EXTRACCION DE DATOS ]</span></h1>
+        </header>
+
+        <div class="content-box">
+            <h2>[ DOC. 01: FANZINE INTERACTIVO ]</h2>
+            <p>El juego no existe, pero sus reglas si. Este manual fue diseñado exclusivamente para la ManualJam. Explora las mecanicas, el lore y los enemigos desde el navegador.</p>
+            
+            <div style="border: 4px solid var(--border-color); box-shadow: 4px 4px 0 var(--border-color); margin: 30px 0; background-color: var(--bg-dark);">
+                <iframe src="manual.html" width="100%" height="500px" style="border: none;" title="Visor del Fanzine Dreamfall"></iframe>
+            </div>
+
+            <div class="action-buttons">
+                <a href="manual.html" target="_blank" class="pixel-btn primary">[ ABRIR MANUAL EN PANTALLA COMPLETA ]</a>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>[ DOC. 02: DESCARGAS FISICAS ]</h2>
+            <p>Si deseas preservar estos archivos fuera del entorno de red, puedes descargar el manual formateado en tamaño A5 (listo para imprimir) o acceder a los archivos crudos del desarrollo original en Godot.</p>
+            
+            <div class="grid-container" style="gap: 30px;">
+                
+                <div class="grid-card" style="padding: 25px;">
+                    <h3 style="font-size: 16px; margin-bottom: 15px;">[ MANUAL A5 (.PDF) ]</h3>
+                    <p style="font-size: 16px; color: #aaa;">El fanzine adaptado para impresion en papel.</p>
+                    <a href="manual.html" download class="pixel-btn secondary" style="width: 100%; margin-top: 15px;">[ DESCARGAR PDF ]</a>
+                </div>
+
+                <div class="grid-card" style="padding: 25px;">
+                    <h3 style="font-size: 16px; margin-bottom: 15px;">[ LORE Y ASSETS (.ZIP) ]</h3>
+                    <p style="font-size: 16px; color: #aaa;">Bocetos, arte descartado y logica cruda.</p>
+                    <button class="pixel-btn secondary" style="width: 100%; margin-top: 15px;" onclick="iniciarDescargaExtras()">[ INICIAR DESCARGA ]</button>
+                    <p id="descarga-status" style="font-size: 14px; margin-top: 10px; color: var(--accent); min-height: 20px;"></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Desarrollado por Sewer Boy | 2026</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

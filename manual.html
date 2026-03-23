@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual - Dreamfall: Sweetdreams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-paper: #d1cbbd;
+            --text-ink: #1a1a1a;
+            --accent: #7a5980;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #0f0f13;
+            font-family: 'VT323', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Botón de impresión (Desaparece al imprimir) */
+        .print-nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .btn-print {
+            background: var(--accent);
+            color: white;
+            border: 4px solid #000;
+            padding: 10px 20px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            cursor: pointer;
+            box-shadow: 4px 4px 0 #000;
+        }
+
+        .btn-print:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #000; }
+
+        /* Contenedor de Páginas A5 */
+        .page {
+            width: 148mm;
+            height: 210mm;
+            background-color: var(--bg-paper);
+            color: var(--text-ink);
+            margin-bottom: 40px;
+            padding: 15mm;
+            position: relative;
+            box-shadow: 10px 10px 0 rgba(0,0,0,0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #000;
+        }
+
+        /* Estética Fanzine / Fotocopia */
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        h1, h2, h3 { font-family: 'Press Start 2P', cursive; text-transform: uppercase; line-height: 1.2; }
+        h1 { font-size: 22px; text-align: center; margin-top: 40px; }
+        h2 { font-size: 14px; margin-bottom: 20px; border-bottom: 4px solid var(--text-ink); padding-bottom: 10px; }
+        h3 { font-size: 12px; margin: 15px 0 5px 0; color: var(--accent); }
+        
+        p { font-size: 20px; line-height: 1.1; margin-bottom: 15px; text-align: justify; }
+        
+        .page-num { position: absolute; bottom: 10mm; right: 10mm; font-family: 'Press Start 2P'; font-size: 10px; }
+        .page-num.left { right: auto; left: 10mm; }
+
+        .art-box {
+            border: 3px solid var(--text-ink);
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            background: rgba(0,0,0,0.05);
+            text-align: center;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+        .habilidad-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+
+        /* --- CONFIGURACIÓN PARA PDF --- */
+        @media print {
+            body { background: white; padding: 0; }
+            .print-nav { display: none; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+                border: none;
+                width: 148mm;
+                height: 210mm;
+            }
+            .page::before { opacity: 0.1; } /* Más ruido para el impreso */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-nav">
+        <button class="btn-print" onclick="window.print()">[ EXPORTAR PDF ]</button>
+    </div>
+
+    <div class="page">
+        <h1>DREAMFALL<br>SWEETDREAMS</h1>
+        <div class="art-box">
+            [ LOGO CENTRAL ]<br>
+            [ DIBUJO DE ALEX FRENTE AL VACIO ]
+        </div>
+        <p style="text-align: center; font-family: 'Press Start 2P'; font-size: 12px;">MANUAL DE INSTRUCCIONES</p>
+        <p style="text-align: center; margin-top: 10px;">VERSION 1.0 - MANUALJAM</p>
+        <div class="page-num">01</div>
+    </div>
+
+    <div class="page">
+        <h2>[ DOC_01: EL SUJETO ]</h2>
+        <p>Te llamas Alex. La rutina te ha devorado por completo. Cada dia es una copia exacta del anterior.</p>
+        <p>Tu mente ha creado un mecanismo de defensa: sueños lucidos. Pero el refugio se ha contaminado. Tus traumas han tomado forma fisica en siete niveles de consciencia.</p>
+        <div class="art-box" style="height: 150px;">[ SKETCH: HABITACION DE ALEX ]</div>
+        <p>No estas aqui para explorar. Estas aqui para purgar. Si mueres en el sueño, despiertas en la realidad... y la realidad es mucho peor.</p>
+        <div class="page-num left">02</div>
+    </div>
+
+    <div class="page">
+        <h2>[ DOC_02: INTERFAZ ]</h2>
+        <p>La conexion con el sueño se realiza mediante estos inputs:</p>
+        <div class="art-box">
+            [ DIAGRAMA DE TECLADO / MANDO ]
+        </div>
+        <p>MOVIMIENTO: Flechas / D-PAD</p>
+        <p>ACCION: Tecla Z / Boton A</p>
+        <p>HABILIDAD: Tecla X / Boton X</p>
+        <p>MENU: Esc / Start</p>
+        <div class="page-num">03</div>
+    </div>
+
+    <div class="page">
+        <h2>[ DOC_03: TRASLACION ]</h2>
+        <h3>[ 1. PARPADEO R.E.M. ]</h3>
+        <p>Canaliza el movimiento ocular rapido para proyectar tu masa fisica hacia adelante. Ignora colisiones enemigas por 0.2s.</p>
+        <div class="art-box" style="height: 100px;">[ ICONO: OJO ABIERTO ]</div>
+        <h3>[ 2. ANCLAJE LUCIDO ]</h3>
+        <p>Fuerza tu consciencia para adherirte a superficies verticales. Evita la caida libre manteniendo el boton de salto contra un muro.</p>
+        <div class="page-num left">04</div>
+    </div>
+
+    <div class="page">
+        <h2>[ DOC_04: REACCION ]</h2>
+        <h3>[ 3. ESPASMO HIPNICO ]</h3>
+        <p>Usa la sensacion de caida falsa para generar un impulso en el aire. Un segundo salto nacido del panico.</p>
+        <h3>[ 4. PESADEZ CATALEPTICA ]</h3>
+        <p>Concentra el peso muerto de la paralisis del sueño para caer con fuerza bruta. Destruye estructuras debiles.</p>
+        <h3>[ 5. GRITO AHOGADO ]</h3>
+        <p>Dispara un proyectil de angustia pura. Activa interruptores lejanos y despeja sombras menores.</p>
+        <div class="page-num">05</div>
+    </div>
+
+    <div class="page">
+        <h2>[ DOC_05: RUPTURA ]</h2>
+        <h3>[ 6. INVERSION VESTIBULAR ]</h3>
+        <p>Hackea tu oido interno. Al activarlo, la gravedad se invierte. El techo es tu suelo. Requiere concentracion extrema para no perder la lucidez.</p>
+        <div class="art-box" style="height: 120px;">[ DIAGRAMA: MUNDO ROTADO ]</div>
+        <h3>[ 7. TRASCENDENCIA ]</h3>
+        <p>Vuelo libre. El perdon absoluto. Solo disponible en el nucleo del sueño (Noche 7).</p>
+        <div class="page-num left">06</div>
+    </div>
+
+    <div class="page">
+        <h2>[ DOC_06: AMENAZAS ]</h2>
+        <p>Tu mente no quiere que despiertes. Los Reyes Caidos vigilan los accesos:</p>
+        <p><strong>- REYES:</strong> Lentos pero letales. Representan la autoridad opresiva.</p>
+        <p><strong>- CERDOS:</strong> Lacayos de la rutina. Atacan en hordas sin pensar.</p>
+        <div class="art-box" style="height: 120px;">[ SPRITES: KINGS AND PIGS ]</div>
+        <div class="page-num">07</div>
+    </div>
+
+    <div class="page">
+        <h2>[ DOC_07: REPORTE FINAL ]</h2>
+        <p>Este proyecto nacio de la ambicion y murio por la escala. Como programador (sewer boy), el codigo de Godot 4 fue la parte facil.</p>
+        <p>El diseño de niveles para 7 habilidades y gravedad inversa es lo que detuvo el motor. Este manual es la prueba de que el diseño estaba ahi, aunque el mapa aun este oscuro.</p>
+        <div class="page-num left">08</div>
+    </div>
+
+    <div class="page" style="text-align: center; justify-content: center;">
+        <h1 style="margin: 0;">DREAMFALL</h1>
+        <p style="text-align: center; margin: 20px 0;">[ FIN DE LA CONEXION ]</p>
+        <div class="art-box" style="border-radius: 50%; width: 100px; height: 100px; margin: 0 auto;">[ SB ]</div>
+        <p style="text-align: center; margin-top: 40px; font-size: 14px;">
+            Desarrollado por: sewer boy<br>
+            Para: ManualJam 2026<br>
+            Godot 4 Engine<br><br>
+            [ GRACIAS POR LEER ]
+        </p>
+        <div class="page-num">12</div>
+    </div>
+
+</body>
+</html>
